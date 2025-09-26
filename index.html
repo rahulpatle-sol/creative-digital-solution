@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Digital Solutions — Digital Marketing Agency</title>
+
+    <!-- Tailwind (browser build) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Modern fonts for award-winning look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --accent: #60a5fa; /* blue-400 */
+        --muted: rgba(255,255,255,0.06);
+      }
+
+      body{
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Poppins", "Helvetica Neue", Arial;
+        background: #000; color: #fff;
+      }
+
+      .brand-font {
+        font-family: "Poppins", sans-serif;
+
+      }
+.fantasy{
+  font-family: fantasy;
+}
+      /* Slight glass look for cards */
+      .card-glass {
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        border: 1px solid rgba(255,255,255,0.06);
+        backdrop-filter: blur(6px);
+      }
+
+      /* subtle focus ring */
+      .focus-outline:focus {
+        outline: 3px solid rgba(96,165,250,0.15);
+        outline-offset: 2px;
+      }
+
+      /* nice hero video behavior */
+      .hero-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* small helpers */
+      .accent-text { color: var(--accent); }
+    </style>
+  </head>
+
+  <body class="antialiased">
+    <!-- Page container -->
+    <div class="min-h-screen flex flex-col">
+
+      <!-- NAV -->
+      <header class="w-full z-40">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-6">
+          <div class="flex items-center gap-4">
+            <a href="#" class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i class="ri-flashlight-line text-white text-xl"></i>
+              </div>
+              <div class="hidden sm:block brand-font text-lg font-semibold">CreativeDigital</div>
+            </a>
+          </div>
+
+          <!-- Desktop menu -->
+          <ul class="hidden md:flex items-center gap-6 text-sm text-white/90">
+            <li><a href="#services" class="hover:underline">Services</a></li>
+            <li><a href="#process" class="hover:underline">Process</a></li>
+            <li><a href="#tech" class="hover:underline">Tech Stack</a></li>
+            <li><a href="#projects" class="hover:underline">Projects</a></li>
+            <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+            <li><a href="#about" class="hover:underline">About</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+          </ul>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-block px-4 py-2 rounded-md bg-white text-black font-medium hover:opacity-90 transition">Let's Talk</a>
+
+            <!-- Mobile menu toggle -->
+            <button id="menuBtn" aria-label="Toggle menu" class="md:hidden p-2 rounded-md border border-white/10 focus:outline-none focus:outline-2 focus:outline-offset-2 focus:outline-white/20">
+              <i class="ri-menu-line text-2xl"></i>
+            </button>
+          </div>
+        </nav>
+
+        <!-- MOBILE MENU (hidden by default) -->
+        <div id="mobileMenu" class="md:hidden px-6 pb-6 hidden">
+          <ul class="flex flex-col gap-3">
+            <li><a href="#services" class="block py-2 px-3 rounded-md hover:bg-white/5">Services</a></li>
+            <li><a href="#process" class="block py-2 px-3 rounded-md hover:bg-white/5">Process</a></li>
+            <li><a href="#tech" class="block py-2 px-3 rounded-md hover:bg-white/5">Tech Stack</a></li>
+            <li><a href="#projects" class="block py-2 px-3 rounded-md hover:bg-white/5">Projects</a></li>
+            <li><a href="#pricing" class="block py-2 px-3 rounded-md hover:bg-white/5">Pricing</a></li>
+            <li><a href="#about" class="block py-2 px-3 rounded-md hover:bg-white/5">About</a></li>
+            <li><a href="#contact" class="block py-2 px-3 rounded-md hover:bg-white/5">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="relative h-[72vh] md:h-[80vh] w-full overflow-hidden">
+        <!-- Gradient background -->
+        <div class="absolute inset-0 opacity-95"></div>
+
+        <!-- Video background (muted loop) -->
+        <div class="absolute inset-0">
+          <video class="hero-video" src="./mainvid.mp4" autoplay muted loop playsinline></video>
+          <!-- If you prefer a poster fallback, add poster="poster.jpg" to the video tag -->
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+          <div class="max-w-3xl m-16 absolute ">
+            <h1 class="brand-font text-4xl md:text-6xl leading-tight font-extrabold text-white drop-shadow-lg font-fantacy">We build<br/><span class="accent-text">growth-driven</span> digital experiences</h1>
+            <p class="mt-4 text-white/85 text-sm md:text-base">Full-stack digital marketing, high-converting websites, creative branding, and growth campaigns — tailored for startups & scaleups.</p>
+
+            <div class="mt-6 flex gap-3 items-center">
+              <a href="#services" class="px-5 py-3 bg-white text-black rounded-lg font-semibold shadow hover:scale-[1.02] transition transform">Our Services</a>
+              <a href="#contact" class="px-5 py-3 border border-white/20 rounded-lg hover:bg-white/5 transition">Get a Quote</a>
+            </div>
+
+            <!-- quick badges -->
+            <div class="mt-6 flex flex-wrap gap-3 text-xs">
+              <span class="px-3 py-1 rounded-full bg-white/6 text-white/80">Award-quality UI</span>
+              <span class="px-3 py-1 rounded-full bg-white/6 text-white/80">Scalable Web Apps</span>
+              <span class="px-3 py-1 rounded-full bg-white/6 text-white/80">Performance & SEO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+          <div class="w-10 h-10 rounded-full bg-white/8 backdrop-blur-md flex items-center justify-center animate-bounce">
+            <i class="ri-arrow-down-line text-lg"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="brand-font text-3xl md:text-4xl font-bold">Our Services</h2>
+          <p class="mt-2 text-sm text-white/80 max-w-2xl mx-auto">End-to-end digital services — from strategy and UX to ads, web apps and brand identity.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service list: replicate or edit -->
+          <div class="card-glass rounded-xl p-5 card-glow service-card transition-shadow hover:shadow-xl">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500 to-blue-400 flex items-center justify-center">
+                <i class="ri-brush-4-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">UI / UX Design</h3>
+                <p class="mt-2 text-sm text-white/80">Design systems, mobile & web UX, user testing and high fidelity prototypes.</p>
+                <div class="mt-3 text-xs flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-white/6 rounded">Figma</span>
+                  <span class="px-2 py-1 bg-white/6 rounded">Prototyping</span>
+                  <span class="px-2 py-1 bg-white/6 rounded">User Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center">
+                <i class="ri-advertisement-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Ads & Digital Marketing</h3>
+                <p class="mt-2 text-sm text-white/80">Facebook/Instagram, Google Ads, performance campaigns and creative assets.</p>
+                <div class="mt-3 text-xs flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-white/6 rounded">Performance</span>
+                  <span class="px-2 py-1 bg-white/6 rounded">CRO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center">
+                <i class="ri-global-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Web Design & Development</h3>
+                <p class="mt-2 text-sm text-white/80">Responsive web apps, landing pages, PWAs, and fast static sites.</p>
+                <div class="mt-3 text-xs flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-white/6 rounded">Next.js</span>
+                  <span class="px-2 py-1 bg-white/6 rounded">React</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-400 flex items-center justify-center">
+                <i class="ri-image-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Graphic Design & Branding</h3>
+                <p class="mt-2 text-sm text-white/80">Logos, banners, posters, social templates and brand kits.</p>
+                <div class="mt-3 text-xs flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-white/6 rounded">Logo</span>
+                  <span class="px-2 py-1 bg-white/6 rounded">Banner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-rose-500 to-pink-400 flex items-center justify-center">
+                <i class="ri-smartphone-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Mobile-first UI</h3>
+                <p class="mt-2 text-sm text-white/80">Mobile UX, apps, app store-ready designs and responsive patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-glass rounded-xl p-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-400 flex items-center justify-center">
+                <i class="ri-bar-chart-2-line text-white text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">SEO & Content Strategy</h3>
+                <p class="mt-2 text-sm text-white/80">Keyword research, content calendar, and on-page SEO for growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process" class="py-16 px-6 border-t border-white/6">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="brand-font text-2xl md:text-3xl font-bold">How we work</h2>
+          <p class="mt-2 text-sm text-white/80">A simple, transparent process so you always know the next step.</p>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="p-5 card-glass rounded-lg text-left">
+              <div class="w-10 h-10 rounded-md bg-white/6 flex items-center justify-center font-semibold">1</div>
+              <h4 class="mt-3 font-semibold">Discovery</h4>
+              <p class="text-sm text-white/80 mt-1">Research, goals, and KPIs.</p>
+            </div>
+            <div class="p-5 card-glass rounded-lg text-left">
+              <div class="w-10 h-10 rounded-md bg-white/6 flex items-center justify-center font-semibold">2</div>
+              <h4 class="mt-3 font-semibold">Strategy</h4>
+              <p class="text-sm text-white/80 mt-1">Roadmap, messaging, funnel design.</p>
+            </div>
+            <div class="p-5 card-glass rounded-lg text-left">
+              <div class="w-10 h-10 rounded-md bg-white/6 flex items-center justify-center font-semibold">3</div>
+              <h4 class="mt-3 font-semibold">Execute</h4>
+              <p class="text-sm text-white/80 mt-1">Design, build, ads & copy.</p>
+            </div>
+            <div class="p-5 card-glass rounded-lg text-left">
+              <div class="w-10 h-10 rounded-md bg-white/6 flex items-center justify-center font-semibold">4</div>
+              <h4 class="mt-3 font-semibold">Optimize</h4>
+              <p class="text-sm text-white/80 mt-1">Test, scale and report.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section id="tech" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-semibold">Tech & Tools we use</h3>
+          <p class="mt-2 text-sm text-white/80">Modern stack to ship fast and scale well.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <!-- replace with actual logos if you have them -->
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Figma</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Next.js</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">React</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Node.js</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Google Ads</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Meta Ads</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Sentry</div>
+          <div class="px-4 py-2 bg-white/4 rounded-md text-xl">Vercel</div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="py-16 px-6 border-t border-white/6">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="brand-font text-2xl font-bold">Selected Projects</h2>
+              <p class="text-sm text-white/80 mt-1">A few recent launches — click to view.</p>
+            </div>
+            <a href="#projects" class="text-sm hover:underline">View all</a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- project card -->
+            <a class="group block rounded-xl overflow-hidden card-glass p-0" href="#" aria-label="Project 1">
+              <div class="w-full h-52 bg-neutral-800 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <div class="p-4">
+                <h4 class="font-semibold">Brand & Website for Fintech</h4>
+                <p class="text-sm text-white/80 mt-1">Full brand identity + acquisition site and ads.</p>
+              </div>
+            </a>
+
+            <a class="group block rounded-xl overflow-hidden card-glass p-0" href="#" aria-label="Project 2">
+              <div class="w-full h-52 bg-neutral-800 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <div class="p-4">
+                <h4 class="font-semibold">SaaS Landing + Growth Campaign</h4>
+                <p class="text-sm text-white/80 mt-1">High-intent landing & paid social funnel.</p>
+              </div>
+            </a>
+
+            <a class="group block rounded-xl overflow-hidden card-glass p-0" href="#" aria-label="Project 3">
+              <div class="w-full h-52 bg-neutral-800 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="Project 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              </div>
+              <div class="p-4">
+                <h4 class="font-semibold">E-commerce Rebrand & Ads</h4>
+                <p class="text-sm text-white/80 mt-1">Conversion-first redesign and AB testing.</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="brand-font text-2xl md:text-3xl font-bold">Pricing Packs</h2>
+          <p class="mt-2 text-sm text-white/80">Flexible plans — pay per project or monthly growth retainer.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Basic -->
+          <div class="card-glass rounded-xl p-6 text-center">
+            <div class="text-sm text-white/80">Starter</div>
+            <div class="mt-3 text-3xl font-bold">₹9,999<span class="text-sm font-medium text-white/70"> / one-time</span></div>
+            <p class="mt-3 text-sm text-white/80">Landing page + branding starter kit</p>
+            <ul class="mt-4 text-sm text-white/80 space-y-2">
+              <li>1 landing page</li>
+              <li>Basic branding (logo + palette)</li>
+              <li>1 ad creative</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md bg-white text-black font-medium">Get Started</a>
+          </div>
+
+          <!-- Growth -->
+          <div class="card-glass rounded-xl p-6 border-2 border-white/6 shadow-lg">
+            <div class="text-sm text-white/80">Growth</div>
+            <div class="mt-3 text-3xl font-bold">₹29,999<span class="text-sm font-medium text-white/70"> / month</span></div>
+            <p class="mt-3 text-sm text-white/80">Website, monthly ads & conversion work</p>
+            <ul class="mt-4 text-sm text-white/80 space-y-2">
+              <li>Website (up to 5 pages)</li>
+              <li>Monthly ad management (ad spend excluded)</li>
+              <li>Monthly reporting & optimization</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md bg-white text-black font-medium">Start Growth</a>
+          </div>
+
+          <!-- Scale -->
+          <div class="card-glass rounded-xl p-6 text-center">
+            <div class="text-sm text-white/80">Scale</div>
+            <div class="mt-3 text-3xl font-bold">₹79,999<span class="text-sm font-medium text-white/70"> / month</span></div>
+            <p class="mt-3 text-sm text-white/80">Full stack growth + cross-channel ads & product improvements</p>
+            <ul class="mt-4 text-sm text-white/80 space-y-2">
+              <li>Enterprise website & integrations</li>
+              <li>Multi-channel ads & strategy</li>
+              <li>Dedicated growth team</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md bg-white text-black font-medium">Book a Call</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-16 px-6 border-t border-white/6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="brand-font text-2xl font-bold">About Us</h2>
+          <p class="mt-3 text-white/80">We are a team of designers, engineers and performance marketers building measurable growth for ambitious companies.</p>
+          <p class="mt-4 text-sm text-white/70">If you'd like, tell us about the project and we'll propose a plan and estimate.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-semibold">Get in touch</h3>
+          <p class="mt-2 text-sm text-white/80">Share details and we'll reply within 24–48 hours.</p>
+        </div>
+
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Form submit demo — replace with backend.');" aria-label="Contact form">
+          <input required class="p-3 rounded-md border border-white/6 focus-outline" placeholder="Name" />
+          <input required type="email" class="p-3 rounded-md border border-white/6 focus-outline" placeholder="Email" />
+          <input class="p-3 rounded-md border border-white/6 focus-outline" placeholder="Company (optional)" />
+          <input class="p-3 rounded-md border border-white/6 focus-outline" placeholder="Budget (approx)" />
+          <textarea required class="md:col-span-2 p-3 rounded-md border border-white/6 focus-outline" rows="5" placeholder="Tell us about your project"></textarea>
+          <div class="md:col-span-2 flex items-center gap-3">
+            <button type="submit" class="px-5 py-3 rounded-md bg-white text-black font-semibold">Send Message</button>
+            <div class="text-sm text-white/70">Or email us at <a href="mailto:hello@creativedigital.example" class="underline">hello@creativedigital.example</a></div>
+          </div>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mt-auto border-t border-white/6">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                <i class="ri-flashlight-line text-white"></i>
+              </div>
+              <div class="brand-font font-semibold">CreativeDigital</div>
+            </div>
+            <p class="mt-3 text-sm text-white/70 max-w-xs">Digital marketing & product design agency. We build scalable websites, creative ads and brand identities.</p>
+          </div>
+
+          <div class="flex gap-8">
+            <div>
+              <div class="text-sm font-semibold">Services</div>
+              <ul class="mt-3 text-sm text-white/70 space-y-2">
+                <li>UI/UX</li>
+                <li>Ads & Marketing</li>
+                <li>Web Development</li>
+                <li>Branding</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="text-sm font-semibold">Company</div>
+              <ul class="mt-3 text-sm text-white/70 space-y-2">
+                <li>About</li>
+                <li>Projects</li>
+                <li>Careers</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/6 py-4">
+          <div class="max-w-7xl mx-auto px-6 flex items-center justify-between text-sm text-white/60">
+            <div>© <span id="year"></span> CreativeDigital — All rights reserved</div>
+            <div class="flex items-center gap-3">
+              <a href="#" aria-label="Twitter" class="hover:text-white"><i class="ri-twitter-line"></i></a>
+              <a href="#" aria-label="LinkedIn" class="hover:text-white"><i class="ri-linkedin-box-line"></i></a>
+              <a href="#" aria-label="Instagram" class="hover:text-white"><i class="ri-instagram-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Small JS for mobile toggle & year -->
+    <script>
+      (function(){
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>
